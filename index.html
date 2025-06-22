@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>To-Do App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="overlay"></div>
+
+  <div class="heading">
+    <h1><i class="fa-solid fa-list-check heading-icon"></i> My To-Do List</h1>
+    <p class="quote">"Small steps every day lead to big results."</p>
+    <div class="top-menu">
+      <i class="fa-solid fa-bars" id="topMenuIcon"></i>
+      <div class="top-dropdown" id="topDropdown">
+        <label>Filter:
+          <select id="filterStatus">
+            <option value="all">All</option>
+            <option value="completed">Completed</option>
+            <option value="incomplete">Incomplete</option>
+          </select>
+        </label>
+        <label>Sort:
+          <select id="sortOrder">
+            <option value="newest">Newest First</option>
+            <option value="oldest">Oldest First</option>
+          </select>
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <div class="todo-input">
+    <input type="text" id="taskInput" placeholder="Enter your task" />
+    <div class="deadline-wrapper">
+      <label for="deadlineInput" class="deadline-label">
+        <i class="fa-regular fa-clock"></i> Deadline
+      </label>
+      <input type="datetime-local" id="deadlineInput" />
+    </div>
+    <button id="addTaskBtn">Add</button>
+  </div>
+
+  <div class="todo-list" id="taskList"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
