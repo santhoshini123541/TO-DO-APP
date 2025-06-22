@@ -1,23 +1,43 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <title>To-Do App</title>
+
+  <!-- Set viewport for responsive design -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Import Poppins font from Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet" />
+
+  <!-- Import Font Awesome for icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- Link to external CSS file -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
+  <!-- Overlay for semi-transparent background layer -->
   <div class="overlay"></div>
 
+  <!-- Header section with title, quote, and menu -->
   <div class="heading">
+    <!-- Main title with an icon -->
     <h1><i class="fa-solid fa-list-check heading-icon"></i> My To-Do List</h1>
+
+    <!-- Motivational quote below the title -->
     <p class="quote">"Small steps every day lead to big results."</p>
+
+    <!-- Top-right dropdown menu for filter/sort -->
     <div class="top-menu">
+      <!-- Hamburger icon to toggle dropdown -->
       <i class="fa-solid fa-bars" id="topMenuIcon"></i>
+
+      <!-- Hidden dropdown shown when icon is clicked -->
       <div class="top-dropdown" id="topDropdown">
+        <!-- Filter by task status -->
         <label>Filter:
           <select id="filterStatus">
             <option value="all">All</option>
@@ -25,6 +45,8 @@
             <option value="incomplete">Incomplete</option>
           </select>
         </label>
+
+        <!-- Sort tasks by time -->
         <label>Sort:
           <select id="sortOrder">
             <option value="newest">Newest First</option>
@@ -35,19 +57,27 @@
     </div>
   </div>
 
+  <!-- Input area for adding tasks -->
   <div class="todo-input">
+    <!-- Text input for task description -->
     <input type="text" id="taskInput" placeholder="Enter your task" />
+
+    <!-- Deadline input with label and icon -->
     <div class="deadline-wrapper">
       <label for="deadlineInput" class="deadline-label">
         <i class="fa-regular fa-clock"></i> Deadline
       </label>
       <input type="datetime-local" id="deadlineInput" />
     </div>
+
+    <!-- Add task button -->
     <button id="addTaskBtn">Add</button>
   </div>
 
+  <!-- Container for displaying the list of tasks -->
   <div class="todo-list" id="taskList"></div>
 
+  <!-- Link to external JavaScript file -->
   <script src="script.js"></script>
 </body>
 </html>
